@@ -1,0 +1,33 @@
+<html>
+<head>
+     <% include ../partials/head %>
+     <style>
+      
+     </style>
+</head>
+<body>
+
+<!-- detailsPage Page -->
+<div data-role="page" id="detailsPage">
+  
+    <% include ../partials/header %>
+
+  <div data-role="main" class="ui-content">
+      <img src=<%=data[0].path %> >
+      <h3 class="titleName" align="center"><%=data[0].name%></h3>
+      <p align="right">BY: <%=data[0].author%> </p>
+
+      <div data-role="collapsible">
+        <h3>Description</h3>
+        <p><%=data[0].description%></p>
+      </div>   
+
+      <div>
+        <a href="/editPage/<%=data[0].id%>" data-role="button">Edit</a>
+        <a href="/deletePage/<%=data[0].id%>" data-role="button">Delete</a>
+      </div>   
+  </div>
+</div>
+
+</body>
+</html> 

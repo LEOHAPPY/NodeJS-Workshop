@@ -1,0 +1,32 @@
+<html>
+<head>
+     <% include ../partials/head %>
+</head>
+<body>
+
+<!-- editPage Page-->
+<div data-role="page" id="editPage">
+    <% include ../partials/header %>
+
+  <div data-role="main" class="ui-content">
+    
+    <form method="post" action="/editPage/<%=data[0].id%>">
+      <b>Image URL Address</b>
+      <input type="text" name="path" placeholder="image address" value="<%=data[0].path%>" required/>
+      <b>Title</b>
+      <input type="text" name="name" placeholder="name" value="<%=data[0].name %>" required>
+      <b>Category</b>
+      <input type="text" name="category" placeholder="category" value="<%=data[0].category %>" >
+      <b>Photographer</b>
+      <input type="text" name="author" placeholder="author" value="<%=data[0].author %>">
+      <b>Description</b>
+      <textarea name="description" required placeholder="description" ><%=data[0].description %></textarea>
+     
+      <input type="submit" name="submit" value="Save">
+      <input type="button" name="cancel" value="Cancel" class="cancel" onClick="cancelAdd()">
+    </form>
+  </div>   
+</div> 
+
+</body>
+</html> 

@@ -1,0 +1,29 @@
+<html>
+<head>
+     <% include ../partials/head %>
+</head>
+<body>
+
+<!-- addPage Page-->
+<div data-role="page" id="addPage">
+    <% include ../partials/header %>
+
+  <div data-role="main" class="ui-content">
+    
+    <form method="post" action="/addPage">
+      
+      <input type="text" name="path" placeholder="image address" required %>"/>
+
+      <input type="text" name="name" placeholder="name" required>
+      <input type="text" name="category" placeholder="category" >
+      <input type="text" name="author" placeholder="author" >
+      <textarea name="description" required placeholder="description" ></textarea>
+     
+      <input type="submit" name="submit" value="Save">
+      <input type="button" name="cancel" value="Cancel" class="cancel" onClick="cancelAdd()">
+    </form>
+  </div>   
+</div> 
+
+</body>
+</html> 

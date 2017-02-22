@@ -1,0 +1,35 @@
+<html>
+<head>
+     <% include ../partials/head %>
+     
+</head>
+<body>
+    
+<!-- defaultPage -->
+<div data-role="page" id="defaultPage">
+  <% include ../partials/header %>
+
+  <div data-role="main" class="ui-content">
+      <!-- listview -->
+    <ul data-role="listview" data-inset="true" data-filter="true" data-icon="false">
+        <!-- click goto detailsPage -->
+      <% for(var i = 0;i < data.length;i++) { %>
+      <li>
+        <a href="/detailsPage/<%=data[i].id %>">
+        <div class="thumbContainer">
+          <img src=<%=data[i].path %> >
+        </div>
+        <div class="textContainer">
+          <h3><%=data[i].name %></h3>
+          <p>Category: <%=data[i].category %></p>    
+          <p>Photographer: <%=data[i].author %></p>
+        </div>
+        
+        </a>
+      </li>
+      <%}%>
+    </ul>
+  </div>
+</div>
+</body>
+</html>    
